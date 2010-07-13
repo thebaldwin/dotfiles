@@ -1,0 +1,6 @@
+URxvt.font: xft:Monofur:size=10
+URxvt*foreground: #e4e4e4
+URxvt*background: #242424
+URxvt*scrollBar: false
+URxvt*scrollKey: true
+URxvt*internalBorder: 1

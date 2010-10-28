@@ -8,3 +8,5 @@ require 'json'
 require 'curb'
 require 'digest/md5'
 require 'eventmachine'
+
+#IRB.conf[:PROMPT][ IRB.conf[:PROMPT_MODE] ][:RETURN]=''

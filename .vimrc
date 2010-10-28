@@ -34,6 +34,7 @@ set hlsearch
 map <f9> :w<cr>:!ruby %<cr>
 map <f8> :TlistToggle<cr>
 map <f7> :NERDTreeToggle<cr>
+map <f6> :set nopaste<cr>:FufFile **/<cr>
 
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 map <C-Right> gt

@@ -1,0 +1,5 @@
+Host github.com
+  user git
+  HostName github.com
+  PreferredAuthentications publickey
+  IdentityFile FILENAME

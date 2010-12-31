@@ -4,3 +4,7 @@ URxvt*background: #242424
 URxvt*scrollBar: false
 URxvt*scrollKey: true
 URxvt*internalBorder: 1
+URxvt*termName: rxvt
+
+urxvt.matcher.pattern.1: \\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]
+urxvt.urlLauncher: firefox

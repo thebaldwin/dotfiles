@@ -15,12 +15,13 @@ set softtabstop=2
 set expandtab
 
 set number
-set paste
 
 filetype on
 augroup filetypedetect
   au! BufRead,BufNewFile *.god setfiletype ruby
   au! BufRead,BufNewFile *.rb setfiletype ruby
+  au! BufRead,BufNewFile *.erb setfiletype erb
+  au! BufRead,BufNewFile *.ru setfiletype ruby
 augroup END
 
 autocmd filetype make setlocal ts=4 sts=4 sw=4 noexpandtab

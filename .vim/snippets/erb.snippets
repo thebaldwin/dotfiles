@@ -1,0 +1,11 @@
+snippet form
+	<% form_for @${1:model} do |f| -%>
+	${2}
+	<% end -%>
+
+snippet field
+	<%= f.label :${1:model} -%>
+	<%= f.text_field :$1 -%>
+
+snippet lt
+	<%= link_to "${1:name}", ${2:dest} %>

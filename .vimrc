@@ -1,18 +1,34 @@
 syntax on
+
 set title
+
 colorscheme lucius
 set autoindent
+set si
 set bs=2
-
 set t_Co=256
+
 set nobackup
-set bg=light
+set noswapfile
+set nowb
+set bg=dark
 
 set nowrap
 set shiftwidth=2
 set tabstop=2
 set softtabstop=2
 set expandtab
+
+set nocp
+filetype plugin on
+
+set ofu=syntaxcomplete#Complete
+
+let OmniCpp_ShowAccess = 1
+let OmniCpp_ShowPrototypeInAbbr = 1 " show function parameters
+let OmniCpp_MayCompleteDot = 1 " autocomplete after .
+let OmniCpp_MayCompleteArrow = 1 " autocomplete after ->
+let OmniCpp_MayCompleteScope = 1 " autocomplete after ::
 
 set number
 
@@ -24,13 +40,21 @@ augroup filetypedetect
   au! BufRead,BufNewFile *.ru setfiletype ruby
 augroup END
 
+au FileType css imap : :<c-x><c-o>
+autocmd! bufwritepost .vimrc source ~/.vimrc
+
 autocmd filetype make setlocal ts=4 sts=4 sw=4 noexpandtab
 
+"autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+
 filetype indent on
-syntax on
 
 set tags=TAGS;/
+set tags+=~/.vim/tags/cpp
 set hlsearch
+
+let g:fuf_dir_exclude='\v(^|[/\\])(\.(hg|git|bzr))($|[/\\])'
+let g:fuf_file_exclude='\v\~$|\.(o|exe|dll|bak|sw[po])$|(^|[/\\])(\.(hg|git|bzr))($|[/\\])'
 
 map <f9> :w<cr>:!ruby %<cr>
 map <f8> :TlistToggle<cr>
@@ -54,3 +78,4 @@ function! BeginRescue() range
   '<,'> :substitute/^/  /
 endfunction
 
+map <leader>v :tabnew ~/.vimrc<cr>

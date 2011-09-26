@@ -79,3 +79,6 @@ function! BeginRescue() range
 endfunction
 
 map <leader>v :tabnew ~/.vimrc<cr>
+map <leader>e :cn<cr>
+map <leader>w :cp<cr>
+map - :nohls<cr>
